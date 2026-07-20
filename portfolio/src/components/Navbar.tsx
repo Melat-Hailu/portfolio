@@ -8,8 +8,8 @@
 
         <nav className="navigation-links">
           <a href="#home">Home</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
+          <a href="#skills">Skllkills</a>
+          <a href="#projects">Prrrgojects</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
