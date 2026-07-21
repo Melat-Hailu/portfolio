@@ -3,6 +3,7 @@ interface Project {
   title: string;
   description: string;
   technologies: string[];
+  featured?: boolean;
 }
 
 const projects: Project[] = [
@@ -12,6 +13,7 @@ const projects: Project[] = [
     description:
       "Write a short explanation of the problem and the purpose of this project.",
     technologies: ["React", "TypeScript"],
+    featured: true,
   },
   {
     id: 2,
@@ -40,16 +42,22 @@ function Projects() {
 
         <div className="projects-grid">
           {projects.map((project) => (
-            <article className="project-card" key={project.id}>
-              <div className="project-number">
-                {String(project.id).padStart(2, "0")}
+            <article
+              className={`project-card${project.featured ? " project-card--featured" : ""}`}
+              key={project.id}
+            >
+              <div className="project-card-header">
+                <div className="project-number">
+                  {String(project.id).padStart(2, "0")}
+                </div>
+                <div className="project-icon" aria-hidden="true">
+                  ↗
+                </div>
               </div>
 
               <h3>{project.title}</h3>
 
-              <p className="project-description">
-                {project.description}
-              </p>
+              <p className="project-description">{project.description}</p>
 
               <div className="technology-list">
                 {project.technologies.map((technology) => (
@@ -58,7 +66,10 @@ function Projects() {
               </div>
 
               <a href="#" className="project-link">
-                View Project →
+                View Project
+                <span className="project-link-arrow" aria-hidden="true">
+                  →
+                </span>
               </a>
             </article>
           ))}

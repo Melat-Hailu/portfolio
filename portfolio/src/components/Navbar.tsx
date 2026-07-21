@@ -1,4 +1,4 @@
- function Navbar() {
+function Navbar() {
   return (
     <header className="navbar">
       <div className="container navbar-content">
@@ -8,8 +8,8 @@
 
         <nav className="navigation-links">
           <a href="#home">Home</a>
-          <a href="#skills">Skllkills</a>
-          <a href="#projects">Prrrgojects</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>

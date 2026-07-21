@@ -1,8 +1,9 @@
-interface Skill{
-    name:string;
-    description:string
+interface Skill {
+  name: string;
+  description: string;
 }
-const Skill: Skill[] = [
+
+const skills: Skill[] = [
   {
     name: "HTML",
     description: "Website structure",
@@ -21,17 +22,17 @@ const Skill: Skill[] = [
   },
 ];
 
-function Skills()
-{
-    return(
-        <section className="section skills-section" id="skills">
-            <div className="container">
-                <div className="section-heading">
-                    <p>what i know</p>
-                    <p>my skills</p>
-                </div>
-                <div className="skills-grid">
-                      {Skill.map((skill) => (
+function Skills() {
+  return (
+    <section className="section skills-section" id="skills">
+      <div className="container">
+        <div className="section-heading">
+          <p>What I know</p>
+          <h2>My Skills</h2>
+        </div>
+
+        <div className="skills-grid">
+          {skills.map((skill) => (
             <article className="skill-card" key={skill.name}>
               <div className="skill-symbol">
                 {skill.name.substring(0, 2).toUpperCase()}
@@ -43,9 +44,9 @@ function Skills()
             </article>
           ))}
         </div>
-                
-            </div>
-        </section>
-    )
-};
+      </div>
+    </section>
+  );
+}
+
 export default Skills;

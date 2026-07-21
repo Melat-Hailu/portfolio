@@ -1,0 +1,249 @@
+/* .background-animation {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-gradient-mesh {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 90% 60% at 10% 20%, rgba(124, 108, 255, 0.18), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 90% 10%, rgba(99, 85, 232, 0.14), transparent 50%),
+    radial-gradient(ellipse 60% 45% at 50% 100%, rgba(124, 108, 255, 0.1), transparent 55%),
+    #060912;
+}
+
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.bg-orb--1 {
+  top: -12%;
+  right: -8%;
+  width: min(520px, 70vw);
+  height: min(520px, 70vw);
+  background: radial-gradient(circle, rgba(124, 108, 255, 0.55), transparent 70%);
+  animation: float-orb-1 18s ease-in-out infinite;
+}
+
+.bg-orb--2 {
+  bottom: 10%;
+  left: -10%;
+  width: min(440px, 60vw);
+  height: min(440px, 60vw);
+  background: radial-gradient(circle, rgba(91, 79, 212, 0.45), transparent 70%);
+  animation: float-orb-2 22s ease-in-out infinite;
+}
+
+.bg-orb--3 {
+  top: 45%;
+  left: 42%;
+  width: min(360px, 50vw);
+  height: min(360px, 50vw);
+  background: radial-gradient(circle, rgba(168, 155, 255, 0.25), transparent 70%);
+  animation: float-orb-3 26s ease-in-out infinite;
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 85% 75% at 50% 40%, black 20%, transparent 75%);
+  animation: grid-drift 40s linear infinite;
+}
+
+.bg-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+.bg-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 90% 80% at 50% 50%,
+    transparent 40%,
+    rgba(6, 9, 18, 0.65) 100%
+  );
+}
+
+@keyframes float-orb-1 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-40px, 30px) scale(1.06);
+  }
+  66% {
+    transform: translate(25px, -20px) scale(0.96);
+  }
+}
+
+@keyframes float-orb-2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, -35px) scale(1.08);
+  }
+}
+
+@keyframes float-orb-3 {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(calc(-50% + 30px), calc(-50% - 40px)) scale(1.1);
+  }
+}
+
+@keyframes grid-drift {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(72px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-orb,
+  .bg-grid {
+    animation: none;
+  }
+
+  .bg-canvas {
+    opacity: 0.45;
+  }
+} */
+.background-animation {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: #090e1c;
+}
+
+/* Coloured light areas behind the particles */
+.bg-gradient-mesh {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(124, 108, 255, 0.17),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(174, 102, 255, 0.14),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(66, 153, 225, 0.11),
+      transparent 35%
+    );
+}
+
+/* Shared design for the blurred circles */
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  opacity: 0.28;
+}
+
+/* First blurred circle */
+.bg-orb--one {
+  top: 8%;
+  left: 8%;
+  width: 280px;
+  height: 280px;
+  background: #7c6cff;
+}
+
+/* Second blurred circle */
+.bg-orb--two {
+  top: 35%;
+  right: 4%;
+  width: 340px;
+  height: 340px;
+  background: #ae66ff;
+}
+
+/* Third blurred circle */
+.bg-orb--three {
+  bottom: 3%;
+  left: 40%;
+  width: 260px;
+  height: 260px;
+  background: #4299e1;
+}
+
+/* Background square-grid design */
+.bg-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.11;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+}
+
+/* Canvas where particles and lines are drawn */
+.bg-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Darkens the edges of the screen */
+.bg-vignette {
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    transparent 35%,
+    rgba(4, 7, 15, 0.72) 100%
+  );
+}
+
+/* Reduce visual movement when requested */
+@media (prefers-reduced-motion: reduce) {
+  .bg-orb {
+    filter: blur(100px);
+  }
+}

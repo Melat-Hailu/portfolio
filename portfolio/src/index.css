@@ -1,4 +1,5 @@
- * {
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap");
+* {
   box-sizing: border-box;
 }
 
@@ -11,9 +12,18 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   color: #ffffff;
   background: #090e1c;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 a {
@@ -24,4 +34,59 @@ button,
 input,
 textarea {
   font: inherit;
+}
+:root {
+  --bg-primary: #060912;
+  --bg-secondary: #0c1220;
+  --bg-elevated: #121a2e;
+  --bg-card: rgba(18, 26, 46, 0.72);
+  --accent: #7c6cff;
+  --accent-light: #a89bff;
+  --accent-glow: rgba(124, 108, 255, 0.35);
+  --text-primary: #f4f6fb;
+  --text-secondary: #9ca7bc;
+  --text-muted: #6b7890;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(124, 108, 255, 0.45);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(124, 108, 255, 0.35);
+  color: var(--text-primary);
 }
